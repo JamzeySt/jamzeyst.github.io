@@ -6,7 +6,7 @@ SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VER = hashlib.sha1(b"".join(open(os.path.join(SITE, f), "rb").read()
                             for f in ("css/style.css", "css/gate.css", "css/zenos.css", "js/site.js", "js/grid.js",
                                       "js/gate.js", "js/zenos.js"))).hexdigest()[:8]
-URL = "https://0jamzey0.github.io/"
+URL = "https://jamzeyst.github.io/"
 STORE = "https://assetstore.unity.com/publishers/100637"
 YOUTUBE = "https://www.youtube.com/@Jamzey-Dev"
 PATREON = "https://www.patreon.com/cw/JamzeyDev"
