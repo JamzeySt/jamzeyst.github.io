@@ -13,7 +13,7 @@ PATREON = "https://www.patreon.com/cw/JamzeyDev"
 EMAIL = "jamzeyst@gmail.com"
 FAB = "https://www.fab.com/sellers/Jamzey"
 # Fill these in when they exist. Empty ones are left out of the site.
-ITCH = ""          # e.g. "https://jamzey.itch.io"
+ITCH = "https://jamzey.itch.io/"
 DISCORD = ""       # permanent invite, e.g. "https://discord.gg/xxxx"
 NEWSLETTER = ""    # signup page, e.g. "https://buttondown.com/jamzey"
 GOATCOUNTER = ""   # GoatCounter site code, e.g. "jamzey" for jamzey.goatcounter.com
