@@ -28,7 +28,7 @@ FIND_ME = [(STORE, "Unity Asset Store"), (FAB, "Fab"), (ITCH, "itch.io"), (YOUTU
 ASSETS = [
     dict(
         slug="frostfall", name="Frostfall", sub="Deformable Snow for HDRP",
-        store="https://assetstore.unity.com/packages/package/412814", version="1.1.0", hero="thumbnail",
+        store="https://assetstore.unity.com/packages/package/412814", version="1.1.0", demo="https://jamzey.itch.io/frostfall", hero="thumbnail",
         pipelines=["HDRP"],
         tag="Snow that piles up, takes footprints and covers every object.",
         lead="Open-world snow for the High Definition Render Pipeline. Characters leave boot prints, vehicles carve "
@@ -66,7 +66,7 @@ ASSETS = [
     ),
     dict(
         slug="downpour", name="Downpour", sub="Rain & Wet Surfaces for HDRP & URP",
-        store="https://assetstore.unity.com/packages/package/415192", version="1.1",
+        store="https://assetstore.unity.com/packages/package/415192", version="1.1", demo="https://jamzey.itch.io/downpour",
         pipelines=["HDRP", "URP"],
         tag="Rain-soaked scenes without touching a single material.",
         lead="Streets darken and gloss, puddles fill the low spots, water runs down walls and slopes, drops run down "
@@ -552,6 +552,7 @@ def product(a):
       <p class="lead">{escape(a['lead'])}</p>
       <div class="cta">
         {store_button(a, "Get it on the Asset Store")}
+        {ext(a["demo"], "Try the free demo", "btn btn-ghost") if a.get("demo") else ""}
         <a class="btn btn-ghost" href="#video">Watch the trailer</a>
       </div>
     </div>
