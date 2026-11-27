@@ -11,8 +11,12 @@ SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA = "D:/StoreAssetProjects_Media/Publishing"
 
 GALLERY = {
-    "frostfall": ("Frostfall/Fab/Gallery", ".jpg", ["01_hero", "02_footprints", "03_overlay_before_after", "04_trench",
-                                                    "05_shelter", "06_calm_to_blizzard", "10_wind_driven_snow", "14_presets"]),
+    "frostfall": ("Frostfall/Fab/Gallery", ".jpg", ["Frostfall/gallery_v2/fab/01_hero.jpg", "Frostfall/gallery_v2/fab/02_golden_trail.jpg",
+                                                    "Frostfall/gallery_v2/fab/03_footprints.jpg", "03_overlay_before_after",
+                                                    "Frostfall/gallery_v2/fab/04_trench_dusk.jpg", "Frostfall/gallery_v2/fab/05_aerial_midday.jpg",
+                                                    "Frostfall/gallery_v2/fab/06_rocks_windy.jpg", "Frostfall/gallery_v2/fab/07_shelter_bluehour.jpg",
+                                                    "Frostfall/gallery_v2/fab/08_night_moonlit.jpg", "Frostfall/gallery_v2/fab/09_blizzard_trail.jpg",
+                                                    "04_trench", "05_shelter", "06_calm_to_blizzard", "10_wind_driven_snow", "14_presets"]),
     "downpour": ("Downpour/Fab/Gallery", ".jpg", ["01_Hero", "Downpour/v11_media/StoreMedia/V11_02_Lit_Rain.png",
                                                   "Downpour/v11_media/StoreMedia/V11_05_Slope_Flow.png",
                                                   "02_Before_After", "04_Puddles", "07_Running_Drops", "11_Shelter",
@@ -27,8 +31,8 @@ GALLERY = {
                                                          "05_project", "06_quick_actions", "07_editor_health", "08_guided_tour"]),
 }
 CARD = {"editor-customizer": "Cockpit/StoreMedia/KeyImages/YouTube_Thumbnail_1280x720.png",
-        "frostfall": "Frostfall/Fab/Thumbnail_1920x1080.jpg"}
-HERO = {"frostfall": "Frostfall/Fab/Thumbnail_1920x1080.jpg"}
+        "frostfall": "Frostfall/key_images_v2/Fab_Thumbnail_1920x1080.jpg"}
+HERO = {"frostfall": "Frostfall/key_images_v2/Fab_Thumbnail_1920x1080.jpg"}
 
 args = sys.argv[1:]
 FORCE = "--force" in args
