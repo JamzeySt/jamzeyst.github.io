@@ -17,10 +17,11 @@ GALLERY = {
                                                     "Frostfall/gallery_v2/fab/06_rocks_windy.jpg", "Frostfall/gallery_v2/fab/07_shelter_bluehour.jpg",
                                                     "Frostfall/gallery_v2/fab/08_night_moonlit.jpg", "Frostfall/gallery_v2/fab/09_blizzard_trail.jpg",
                                                     "04_trench", "05_shelter", "06_calm_to_blizzard", "10_wind_driven_snow", "14_presets"]),
-    "downpour": ("Downpour/Fab/Gallery", ".jpg", ["01_Hero", "Downpour/v11_media/StoreMedia/V11_02_Lit_Rain.png",
-                                                  "Downpour/v11_media/StoreMedia/V11_05_Slope_Flow.png",
-                                                  "02_Before_After", "04_Puddles", "07_Running_Drops", "11_Shelter",
-                                                  "Downpour/v11_media/StoreMedia/V11_07_HDRP_URP.png"]),
+    "downpour": ("Downpour/Fab/Gallery", ".jpg", ["Downpour/v11_media/StoreMedia/V11_01_Hero.png", "Downpour/v11_media/StoreMedia/V11_02_Lit_Rain.png",
+                                                  "Downpour/v11_media/StoreMedia/V11_03_Lamp_Glow.png", "Downpour/v11_media/StoreMedia/V11_05_Slope_Flow.png",
+                                                  "Downpour/v11_media/StoreMedia/V11_04_Slopes.png", "Downpour/v11_media/StoreMedia/V11_06_Wall_Streams.png",
+                                                  "01_Hero", "02_Before_After", "04_Puddles", "07_Running_Drops", "11_Shelter",
+                                                  "14_Lightning", "Downpour/v11_media/StoreMedia/V11_07_HDRP_URP.png", "Downpour/v11_media/StoreMedia/V11_08_Editor.png"]),
     "scorch": ("Scorch/Fab/Gallery", ".jpg", ["Scorch/StoreMedia/15_Enhanced_Hero.png",
                                               "Scorch/StoreMedia/16_Enhanced_Three_Modes.png",
                                               "02_Before_After", "03_Burn_Front", "04_Spread", "06_Water",
@@ -31,8 +32,10 @@ GALLERY = {
                                                          "05_project", "06_quick_actions", "07_editor_health", "08_guided_tour"]),
 }
 CARD = {"editor-customizer": "Cockpit/StoreMedia/KeyImages/YouTube_Thumbnail_1280x720.png",
+        "downpour": "Downpour/v11_media/StoreMedia/V11_01_Hero.png",
         "frostfall": "Frostfall/key_images_v2/Fab_Thumbnail_1920x1080.jpg"}
-HERO = {"frostfall": "Frostfall/key_images_v2/Fab_Thumbnail_1920x1080.jpg"}
+HERO = {"frostfall": "Frostfall/key_images_v2/Fab_Thumbnail_1920x1080.jpg",
+        "downpour": "Downpour/v11_media/StoreMedia/V11_01_Hero.png"}
 
 args = sys.argv[1:]
 FORCE = "--force" in args
