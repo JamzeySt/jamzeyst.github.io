@@ -20,7 +20,7 @@ GALLERY = {
     "downpour": ("Downpour/Fab/Gallery", ".jpg", ["Downpour/v11_media/StoreMedia/V11_01_Hero.png", "Downpour/v11_media/StoreMedia/V11_02_Lit_Rain.png",
                                                   "Downpour/v11_media/StoreMedia/V11_03_Lamp_Glow.png", "Downpour/v11_media/StoreMedia/V11_05_Slope_Flow.png",
                                                   "Downpour/v11_media/StoreMedia/V11_04_Slopes.png", "Downpour/v11_media/StoreMedia/V11_06_Wall_Streams.png",
-                                                  "01_Hero", "02_Before_After", "04_Puddles", "07_Running_Drops", "11_Shelter",
+                                                  "02_Before_After", "04_Puddles", "07_Running_Drops", "11_Shelter",
                                                   "14_Lightning", "Downpour/v11_media/StoreMedia/V11_07_HDRP_URP.png", "Downpour/v11_media/StoreMedia/V11_08_Editor.png"]),
     "scorch": ("Scorch/Fab/Gallery", ".jpg", ["Scorch/StoreMedia/15_Enhanced_Hero.png",
                                               "Scorch/StoreMedia/16_Enhanced_Three_Modes.png",

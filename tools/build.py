@@ -106,7 +106,7 @@ ASSETS = [
         gallery=[("v11_01_hero", "Downpour 1.1 hero street with neon and lit rain"), ("v11_02_lit_rain", "Rain lit by streetlamps"),
                  ("v11_03_lamp_glow", "Lamps glow in the wet air"), ("v11_05_slope_flow", "Water flowing down a slope"),
                  ("v11_04_slopes", "Sheets of water draining a ramp"), ("v11_06_wall_streams", "Water streaming down walls"),
-                 ("01_hero", "Downpour hero street with lightning"), ("02_before_after", "Dry and wet, before and after"),
+                 ("02_before_after", "Dry and wet, before and after"),
                  ("04_puddles", "Puddles with ripples"), ("07_running_drops", "Running drops"),
                  ("11_shelter", "Dry under shelter"), ("14_lightning", "Lightning over the wet street"),
                  ("v11_07_hdrp_urp", "HDRP and URP side by side"), ("v11_08_editor", "The Downpour editor with live preview")],
