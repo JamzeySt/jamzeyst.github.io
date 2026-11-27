@@ -6,6 +6,16 @@ SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VER = hashlib.sha1(b"".join(open(os.path.join(SITE, f), "rb").read()
                             for f in ("css/style.css", "css/gate.css", "css/zenos.css", "js/site.js", "js/grid.js",
                                       "js/gate.js", "js/zenos.js"))).hexdigest()[:8]
+
+
+def img(path):
+    """Image URL with a content hash, so a replaced picture never shows stale from the browser cache."""
+    full = os.path.join(SITE, path)
+    if not os.path.exists(full):
+        return path
+    return f"{path}?v={hashlib.sha1(open(full, 'rb').read()).hexdigest()[:8]}"
+
+
 URL = "https://jamzeyst.github.io/"
 STORE = "https://assetstore.unity.com/publishers/100637"
 YOUTUBE = "https://www.youtube.com/@Jamzey-Dev"
@@ -399,7 +409,7 @@ FOOT = f"""<footer>
 def video(vid, title, note):
     cap = f'<figcaption>{escape(title)}<small>{escape(note)}</small></figcaption>'
     if vid.endswith(".mp4"):
-        poster = "img/" + vid.split("/")[1].replace("-trailer.mp4", "") + "/card.webp"
+        poster = img("img/" + vid.split("/")[1].replace("-trailer.mp4", "") + "/card.webp")
         return (f'<figure class="video"><div class="yt-frame"><video controls preload="none" playsinline '
                 f'poster="{poster}" aria-label="{escape(title)}"><source src="{vid}" type="video/mp4"></video></div>{cap}</figure>')
     return (f'<figure class="video"><button class="yt" data-id="{vid}" aria-label="Play {escape(title)}">'
@@ -407,7 +417,7 @@ def video(vid, title, note):
 
 def card(a):
     return f"""<a class="card" href="{a['slug']}.html">
-  <div class="shot">{f'<span class="status">{a["status"]}</span>' if a.get("status") else ""}<img src="img/{a['slug']}/card.webp" alt="{a['name']}" loading="lazy" decoding="async" width="960" height="540"></div>
+  <div class="shot">{f'<span class="status">{a["status"]}</span>' if a.get("status") else ""}<img src="{img(f"img/{a['slug']}/card.webp")}" alt="{a['name']}" loading="lazy" decoding="async" width="960" height="540"></div>
   <div class="body">
     {chips(a)}
     <h3>{a['name']}</h3>
@@ -563,7 +573,7 @@ def product(a):
         <a class="btn btn-ghost" href="#video">Watch the trailer</a>
       </div>
     </div>
-    <div class="shot"><img src="img/{a['slug']}/{a.get('hero', a['gallery'][0][0])}.webp" alt="{escape(a['name'] + ' – ' + a['sub'])}" width="1600" height="900" fetchpriority="high" decoding="async"></div>
+    <div class="shot"><img src="{img(f"img/{a['slug']}/{a.get('hero', a['gallery'][0][0])}.webp")}" alt="{escape(a['name'] + ' – ' + a['sub'])}" width="1600" height="900" fetchpriority="high" decoding="async"></div>
   </div>
 </section>
 
@@ -589,7 +599,7 @@ def product(a):
   <div class="wrap">
     <div class="sec-head"><div><div class="kicker">Gallery</div><h2>Screenshots</h2></div><p>Click any shot to view it full size.</p></div>
     <div class="gallery">
-{"".join(f'<button data-full="img/{a["slug"]}/{f}.webp"><img src="img/{a["slug"]}/{f}_thumb.webp" alt="{escape(alt)}" loading="lazy" decoding="async" width="640" height="360"></button>' for f, alt in a['gallery'])}
+{"".join(f'<button data-full="{img(f'img/{a["slug"]}/{f}.webp')}"><img src="{img(f'img/{a["slug"]}/{f}_thumb.webp')}" alt="{escape(alt)}" loading="lazy" decoding="async" width="640" height="360"></button>' for f, alt in a['gallery'])}
     </div>
   </div>
 </section>
